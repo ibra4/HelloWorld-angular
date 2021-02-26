@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'HelloWorld';
+
+  public title : string;
+
+  ngOnInit() {
+    this.title = 'hi'
+  }
+
+  greet(name : string) {
+    return "hi " + name
+  }
 }
