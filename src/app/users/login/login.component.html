@@ -1,23 +1,18 @@
 <div id="container">
-  <h1 *ngIf="name == 'ibrahim'">long</h1>
-    <h1 *ngIf="name=='ibrahim';else shortName"></h1>
-
-    <ng-template #shortName>
-        <h1>Short</h1>
-    </ng-template>
-
-    <div>
-        <h1>For loop</h1>
-        <h3 *ngFor="let color of colors" class="color-item" [ngStyle]="{'background-color': color}"></h3>
-    </div>
-
   <form (ngSubmit)="handleSubmit(loginForm.value)" #loginForm="ngForm">
-    <input type="text" ngModel name="username" placeholder="enter username">
-    <input type="password" ngModel name="password" placeholder="enter password">
-    <button type="submit">Submit</button>
+    <div>
+      <input required #email="ngModel" type="email" ngModel name="email" placeholder="Enter your email">
+      <small *ngIf="email.touched && email.invalid" class="text-danger">E-mail is invalid</small>
+    </div>
+    <br>
+    <div>
+      <input required #password="ngModel" type="password" ngModel name="password" placeholder="enter password">
+      <small *ngIf="password.touched && password.invalid" class="text-danger">Username is invalid</small>
+    </div>
+    <br>
+    <div>
+      <button type="submit">Submit</button>
+    </div>
   </form>
-
-  <h1>heroDataToPass</h1>
-  <h2 *ngFor="let number of heroDataToPass">{{number}}</h2>
 
 </div>
