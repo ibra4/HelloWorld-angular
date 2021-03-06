@@ -19,6 +19,10 @@ export class AppComponent {
 
   }
 
+  callMeChild(data) {
+    console.log(data)
+  }
+
   getBlogs() {
     this.blogs = [
       {

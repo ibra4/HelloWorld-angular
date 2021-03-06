@@ -22,6 +22,6 @@
 <div class="container">
   <h1>Blogs : </h1>
   <div *ngFor="let blog of blogs" style="padidng: 20px">
-    <app-blog [blog]="blog"></app-blog>
+    <app-blog (callMeChild)="callMeChild($event)" [blog]="blog"></app-blog>
   </div>
 </div>

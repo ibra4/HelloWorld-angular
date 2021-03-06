@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { BlogsInterface } from '../Interfaces/blogs-interface';
 
 @Component({
@@ -10,9 +10,12 @@ export class BlogComponent implements OnInit {
 
   @Input() blog: BlogsInterface
 
+  @Output() callMeChild: EventEmitter<BlogsInterface> = new EventEmitter()
+
   constructor() { }
 
   ngOnInit(): void {
+    this.callMeChild.emit(this.blog)
   }
 
 }
