@@ -9,3 +9,12 @@
 <h4>
   <app-test-component></app-test-component>
 </h4>
+<h5>
+  <app-login></app-login>
+</h5>
+
+<h1 (click)="getName('sami')">Click to greet</h1>
+
+<input type="text" name="test" id="test" [value]="test" (keyup)="handleTestChange($event)">
+<button (click)="log(test)">input value</button>
+<p>{{test}}</p>
