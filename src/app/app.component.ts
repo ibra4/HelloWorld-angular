@@ -13,6 +13,8 @@ export class AppComponent {
 
   public test = 'hello';
 
+  public dataToPass: Array<number> = [1, 2, 3, 4, 5]
+
   ngOnInit() {
     this.title = 'hi'
   }
