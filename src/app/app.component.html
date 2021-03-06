@@ -1,16 +1,16 @@
 <h1>{{title}}</h1>
-<!-- <h1>{{greet("ibra")}}</h1> -->
+<!-- <h1>{{greet("ibra")}}</h1>
 <h2>
-  <!-- <app-test-component></app-test-component> -->
+  <app-test-component></app-test-component>
 </h2>
 <h3>
-  <!-- <app-test-component></app-test-component> -->
+  <app-test-component></app-test-component>
 </h3>
 <h4>
-  <!-- <app-test-component></app-test-component> -->
+  <app-test-component></app-test-component>
 </h4>
 <h5>
-  <!-- <app-login></app-login> -->
+  <app-login></app-login>
   <app-login [heroDataToPass]="dataToPass"></app-login>
 </h5>
 
@@ -18,4 +18,10 @@
 
 <input type="text" name="test" id="test" [value]="test" (keyup)="handleTestChange($event)">
 <button (click)="log(test)">input value</button>
-<p>{{test}}</p>
+<p>{{test}}</p> -->
+<div class="container">
+  <h1>Blogs : </h1>
+  <div *ngFor="let blog of blogs" style="padidng: 20px">
+    <app-blog [blog]="blog"></app-blog>
+  </div>
+</div>

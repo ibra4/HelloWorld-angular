@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BlogsInterface } from './Interfaces/blogs-interface';
 
 @Component({
   selector: 'app-root',
@@ -9,41 +10,38 @@ export class AppComponent {
 
   public title: string;
 
-  public name: string = "name is brahim";
-
-  public test = 'hello';
-
-  public dataToPass: Array<number> = [1, 2, 3, 4, 5]
+  public blogs: Array<BlogsInterface>
 
   ngOnInit() {
-    this.title = 'hi'
+    this.title = 'Learning angular'
+
+    this.getBlogs()
+
   }
 
-  greet(name: string) {
-    return "hi " + name
+  getBlogs() {
+    this.blogs = [
+      {
+        id: 1,
+        title: 'title 1',
+        description: 'description 1',
+        published: true
+      },
+      {
+        id: 2,
+        title: 'title 2',
+        description: 'description 2',
+        published: false
+      },
+      {
+        id: 3,
+        title: 'title 3',
+        description: 'description 3',
+        published: true
+      }
+    ]
   }
 
-  getTest() {
-    console.log(this.test)
-  }
 
-  ngOnChanges(changes) {
-    console.log(changes)
-  }
 
-  handleTestChange(e) {
-    this[e.target.name] = e.target.value
-  }
-
-  getName(name?) {
-    if (name) {
-      alert("My name is " + name)
-    } else {
-      alert("My name is " + this.name)
-    }
-  }
-
-  log(val) {
-    console.log(val)
-  }
 }
