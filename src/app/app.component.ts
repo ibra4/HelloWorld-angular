@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { BlogsInterface } from './Interfaces/blogs-interface';
+import { BlogsService } from './services/blogs.service';
 
 @Component({
   selector: 'app-root',
@@ -12,45 +13,17 @@ export class AppComponent {
 
   public blogs: Array<BlogsInterface>
 
+  constructor(private blogsService: BlogsService) { }
+
   ngOnInit() {
     this.title = 'Learning angular'
 
-    this.getBlogs()
+    this.blogs = this.blogsService.getData()
 
   }
 
   callMeChild(data) {
     console.log(data)
   }
-
-  getBlogs() {
-    this.blogs = [
-      {
-        id: 1,
-        title: 'title 1',
-        description: 'description 1',
-        date: Date.now(),
-        published: true,
-        price: 300
-      },
-      {
-        id: 2,
-        title: 'title 2',
-        description: 'description 2',
-        date: Date.now(),
-        published: false
-      },
-      {
-        id: 3,
-        title: 'title 3',
-        description: 'description 3',
-        date: Date.now(),
-        published: true,
-        price: 1950
-      }
-    ]
-  }
-
-
 
 }

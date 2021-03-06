@@ -15,7 +15,6 @@ export class BlogComponent implements OnInit {
   constructor() { }
 
   callTheParentFunctionWithBlog() {
-    console.log('hi')
     this.callMeChild.emit(this.blog)
   }
 

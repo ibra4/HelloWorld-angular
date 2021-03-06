@@ -8,12 +8,10 @@ export class PriceDirectiveDirective {
   @Input() appPriceHighlight: string
 
   @HostListener('mouseenter') onMouseEnter() {
-    console.log('enter')
     this.highlight(this.appPriceHighlight)
   }
 
   @HostListener('mouseleave') onMouseLeave() {
-    console.log('leave')
     this.highlight(null)
   }
 
