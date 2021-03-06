@@ -4,13 +4,19 @@
     <b>ID:</b> <span>{{blog.id}}</span>
   </div>
   <div>
-    <b>Title:</b> <span>{{blog.title}}</span>
+    <b>Title:</b> <span>{{blog.title | titlecase}}</span>
   </div>
   <div>
     <b>Description:</b> <span>{{blog.description}}</span>
   </div>
   <div>
     <b>Published:</b> <span>{{blog.published ? 'published': 'not published'}}</span>
+  </div>
+  <div>
+    <b>Date:</b> <span>{{blog.date | date}}</span>
+  </div>
+  <div *ngIf="blog.price">
+    <b>Published:</b> <span>{{blog.price | currency:'JOD'}}</span>
   </div>
 </h3>
 <button (click)="callTheParentFunctionWithBlog()">Call parent</button>
