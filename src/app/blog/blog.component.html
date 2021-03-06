@@ -16,7 +16,7 @@
     <b>Date:</b> <span>{{blog.date | date}}</span>
   </div>
   <div *ngIf="blog.price">
-    <b>Published:</b> <span>{{blog.price | currency:'JOD'}}</span>
+    <b>Price:</b> <span [appPriceHighlight]="'green'">{{blog.price | currency:'JOD'}}</span>
   </div>
 </h3>
 <button (click)="callTheParentFunctionWithBlog()">Call parent</button>

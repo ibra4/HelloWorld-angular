@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { TestComponentComponent } from './test-component/test-component.component';
 import { UsersModule } from './users/users.module';
 import { BlogComponent } from './blog/blog.component';
+import { PriceDirectiveDirective } from './directives/priceDirective/price-directive.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestComponentComponent,
-    BlogComponent
+    BlogComponent,
+    PriceDirectiveDirective
   ],
   imports: [
     BrowserModule,
