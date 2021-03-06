@@ -10,6 +10,7 @@
     <b>Description:</b> <span>{{blog.description}}</span>
   </div>
   <div>
-      <b>Published:</b> <span>{{blog.published ? 'published': 'not published'}}</span>
+    <b>Published:</b> <span>{{blog.published ? 'published': 'not published'}}</span>
   </div>
 </h3>
+<button (click)="callTheParentFunctionWithBlog()">Call parent</button>

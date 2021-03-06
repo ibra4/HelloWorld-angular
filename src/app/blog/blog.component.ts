@@ -14,8 +14,12 @@ export class BlogComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  callTheParentFunctionWithBlog() {
+    console.log('hi')
     this.callMeChild.emit(this.blog)
+  }
+
+  ngOnInit(): void {
   }
 
 }
